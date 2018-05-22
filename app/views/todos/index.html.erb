@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="text-center">To Do List</h1>
+  
+  <div class="panel panel-info">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">事項清單</h3>
+    </div>
+
+    <table class="table table-hover">
+      <thead/>
+      <tbody>
+        <% @todos.each do |todo| %>
+          <tr>
+            <td>
+              <p>
+                <%= todo.title %>
+              </p>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot/>
+    </table>
+    
+  </div>
+  
+</div>
