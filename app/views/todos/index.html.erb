@@ -14,16 +14,16 @@
           <%= f.text_field :title, class: "form-control" %>
           <div class="input-group-addon">
             <% if @todo.new_record? %>
-              <%= f.submit "新增" %>
+              <%= f.submit "新增", class: "my-btn my-btn-transparent" %>
             <% else %>
-              <%= f.submit "修改" %>
+              <%= f.submit "修改", class: "my-btn my-btn-transparent" %>
             <% end %>
           </div>
         </div>
       <% end %>
     </div>
 
-    <table class="table table-hover">
+    <table class="my-table table table-hover">
       <thead/>
       <tbody>
         <% @todos.each do |todo| %>

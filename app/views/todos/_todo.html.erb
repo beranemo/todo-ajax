@@ -1,22 +1,22 @@
 <td>
   <%= link_to toggle_check_todo_path(todo), method: :post do %>
     <% if todo.done? %>
-      <span class="glyphicon glyphicon-check"></span>
+      <span class="span-default my-font glyphicon glyphicon-check"></span>
     <% else %>
-      <span class="glyphicon glyphicon-unchecked"></span>
+      <span class="span-default my-font glyphicon glyphicon-unchecked"></span>
     <% end %>
   <% end %>
 </td>
 <td>
-  <p>
+  <p class="my-font title">
     <%= todo.title %>
   </p>
 </td>
 <td>
   <%= link_to todos_path(x: todo.id) do %>
-    <span class="text-info glyphicon glyphicon-pencil"></span>
+    <span class="span-default text-info glyphicon glyphicon-pencil"></span>
   <% end %>
   <%= link_to todo_path(id: todo.id), method: :delete do %>
-    <span class="text-danger glyphicon glyphicon-trash"></span>
+    <span class="span-default text-danger glyphicon glyphicon-trash"></span>
   <% end %>
 </td>
