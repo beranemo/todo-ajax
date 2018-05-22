@@ -12,11 +12,7 @@
       <tbody>
         <% @todos.each do |todo| %>
           <tr>
-            <td>
-              <p>
-                <%= todo.title %>
-              </p>
-            </td>
+            <%= render "todo", todo: todo %>
           </tr>
         <% end %>
       </tbody>
