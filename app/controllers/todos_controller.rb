@@ -31,6 +31,13 @@ class TodosController < ApplicationController
     redirect_to todos_path
   end
   
+  def toggle_check
+    @todo = Todo.find(params[:id])
+    @todo.toggle!(:done)
+
+    redirect_to todos_path
+  end
+  
   def todo_params
     params.require(:todo).permit(:title)
   end
