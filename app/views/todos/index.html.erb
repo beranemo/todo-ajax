@@ -13,7 +13,11 @@
         <div class="input-group">
           <%= f.text_field :title, class: "form-control" %>
           <div class="input-group-addon">
-            <%= f.submit "新增" %>
+            <% if @todo.new_record? %>
+              <%= f.submit "新增" %>
+            <% else %>
+              <%= f.submit "修改" %>
+            <% end %>
           </div>
         </div>
       <% end %>

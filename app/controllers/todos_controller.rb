@@ -2,7 +2,12 @@ class TodosController < ApplicationController
   
   def index
     @todos = Todo.all
-    @todo = Todo.new
+    
+    if params[:x]
+      @todo = Todo.find(params[:x])
+    else
+      @todo = Todo.new
+    end
   end
 
   def create
@@ -12,9 +17,16 @@ class TodosController < ApplicationController
     redirect_to todos_path
   end
   
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update_attributes(todo_params)
+    
+    redirect_to todos_path
+  end
+
+  
   def todo_params
     params.require(:todo).permit(:title)
   end
-
   
 end

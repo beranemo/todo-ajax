@@ -3,3 +3,8 @@
     <%= todo.title %>
   </p>
 </td>
+<td>
+  <%= link_to todos_path(x: todo.id) do %>
+    <span class="text-info glyphicon glyphicon-pencil"></span>
+  <% end %>
+</td>
