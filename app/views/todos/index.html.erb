@@ -8,7 +8,7 @@
     </div>
     
     <div class="panel-body">
-      <%= form_for @todo do |f| %>
+      <%= form_for @todo, { remote: true } do |f| %>
         <%= f.label "新增事項" %>
         <div class="input-group">
           <%= f.text_field :title, class: "form-control" %>
