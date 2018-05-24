@@ -1,0 +1,3 @@
+var todo = document.createElement("tr");
+todo.innerHTML = "<%= j render "todo", todo: @todo %>";
+$("#todolist").append(todo);

@@ -25,7 +25,7 @@
 
     <table class="my-table table table-hover">
       <thead/>
-      <tbody>
+      <tbody id="todolist">
         <% @todos.each do |todo| %>
           <tr>
             <%= render "todo", todo: todo %>
