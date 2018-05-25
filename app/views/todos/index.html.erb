@@ -27,7 +27,7 @@
       <thead/>
       <tbody id="todolist">
         <% @todos.each do |todo| %>
-          <tr>
+          <tr id="todo-<%= todo.id %>">
             <%= render "todo", todo: todo %>
           </tr>
         <% end %>
