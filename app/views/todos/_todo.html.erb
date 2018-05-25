@@ -13,7 +13,7 @@
   </p>
 </td>
 <td>
-  <%= link_to todos_path(x: todo.id) do %>
+  <%= link_to edit_todo_path(id: todo.id) do %>
     <span class="span-default text-info glyphicon glyphicon-pencil"></span>
   <% end %>
   <%= link_to todo_path(id: todo.id), remote: true, method: :delete do %>
