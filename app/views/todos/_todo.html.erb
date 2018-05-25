@@ -16,7 +16,7 @@
   <%= link_to todos_path(x: todo.id) do %>
     <span class="span-default text-info glyphicon glyphicon-pencil"></span>
   <% end %>
-  <%= link_to todo_path(id: todo.id), method: :delete do %>
+  <%= link_to todo_path(id: todo.id), remote: true, method: :delete do %>
     <span class="span-default text-danger glyphicon glyphicon-trash"></span>
   <% end %>
 </td>
