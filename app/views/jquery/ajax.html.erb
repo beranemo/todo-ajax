@@ -8,4 +8,19 @@
     
   </div>
 </div>
+
+<script>
+  $("#launch").click(function(){
+    
+    $.ajax({
+      url: 'http://uinamws.com/api/?ext',
+      method: 'GET',
+      dataType: 'json',
+      success: function(data){
+        
+      }
+    });
+    
+  });
+</script> 
   
