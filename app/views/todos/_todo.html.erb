@@ -1,5 +1,5 @@
 <td>
-  <%= link_to toggle_check_todo_path(todo), method: :post do %>
+  <%= link_to toggle_check_todo_path(todo), remote: true, method: :post do %>
     <% if todo.done? %>
       <span class="span-default my-font glyphicon glyphicon-check"></span>
     <% else %>
