@@ -21,9 +21,7 @@ class TodosController < ApplicationController
   
   def update
     @todo = Todo.find(params[:id])
-    @todo.update_attributes(todo_params)
-    
-    redirect_to todos_path
+    @todo.update_attributes(todo_params)    
   end
   
   def destroy
