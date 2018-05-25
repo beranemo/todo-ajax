@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   root 'todos#index'
   
   get "/jquery_on", to: "jquery#on"
+  get "/jquery_ajax", to: "jquery#ajax"
   
 end
