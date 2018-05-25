@@ -10,14 +10,28 @@
 </div>
 
 <script>
+  var i = 1;
+  
   $("#launch").click(function(){
     
     $.ajax({
-      url: 'http://uinamws.com/api/?ext',
+      url: 'http://uinames.com/api/?ext',
       method: 'GET',
       dataType: 'json',
       success: function(data){
-        
+        var name = data["name"] + " " + data["surname"];
+        var photo = data["photo"];
+
+        var newUser = $('<div class="col-xs-4"></div>');
+        newUser.append('<p class="num"></p>');
+        newUser.append('<img>');
+        newUser.append('<div class="name"></div>');
+
+        newUser.find("p").html('#' + i);
+        newUser.find("img").attr("src", photo);
+        newUser.find(".name").html(name);
+        $('#list').append(newUser);
+        i++;
       }
     });
     
