@@ -24,9 +24,7 @@ class TodosController < ApplicationController
   
   def destroy
     @todo = Todo.find(params[:id])
-    @todo.destroy
-    
-    redirect_to todos_path
+    @todo.destroy    
   end
   
   def toggle_check
