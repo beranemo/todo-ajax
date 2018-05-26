@@ -42,7 +42,9 @@ $("#todolist").on("click", ".edit-todo", function(event){
     method: 'GET',
     dataType: 'json',
     success: function(data){
-      
+      var textColumn = $("#" + data["id"]).find(".my-title");
+      textColumn.html($("#edit-template").html());
+      textColumn.find(".update-title").val(data["title"]);
     }
   });
 });
