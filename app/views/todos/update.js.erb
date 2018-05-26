@@ -1,2 +1,2 @@
 <% html = j render "todo", todo: @todo %>
-$("#todo-<%= @todo.id %>").html("<%= html %>")
+$("#<%= @todo.id %>").html("<%= html %>")
