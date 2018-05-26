@@ -42,5 +42,13 @@
 $(".delete-todo").on("click", function(event){
   var id = event.target.parentNode.parentNode.id;
   console.log(id);
+  $.ajax({
+    url: 'todos/' + id,
+    method: 'DELETE',
+    dataType: 'json',
+    success: function(data){
+      $("#" + data["id"]).remove();
+    }
+  });
 });
 </script>
