@@ -38,6 +38,7 @@ class TodosController < ApplicationController
   def toggle_check
     @todo = Todo.find(params[:id])
     @todo.toggle!(:done)
+    render json: { id: @todo.id, done: @todo.done }
   end
   
   private
