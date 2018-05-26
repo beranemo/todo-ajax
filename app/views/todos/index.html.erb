@@ -35,6 +35,21 @@
   
 </div>
 <script>
+  $("#todolist").on("click", ".toggle-todo", function(event) {
+  var id = event.target.parentNode.parentNode.id;
+
+  $.ajax({
+    url: "todos/" + id + "/toggle_check",
+    method: "POST",
+    dataType: "json",
+    success: function(data) {
+
+    }
+  });
+    
+});
+</script> 
+<script>
 $("#todolist").on("click", ".edit-todo", function(event){
   var id = event.target.parentNode.parentNode.id;
   $.ajax({
