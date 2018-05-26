@@ -58,7 +58,9 @@ $("#todolist").on("click", ".edit-todo", function(event){
             }
           },
           success: function(updateData) {
-            
+            var textColumn = $("#" + data["id"]).find(".my-title");
+            textColumn.html('<p class="title my-font"></p>');
+            textColumn.find('p').html(updateData["title"]);
           }
         });
         
