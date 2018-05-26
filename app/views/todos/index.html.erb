@@ -45,6 +45,11 @@ $("#todolist").on("click", ".edit-todo", function(event){
       var textColumn = $("#" + data["id"]).find(".my-title");
       textColumn.html($("#edit-template").html());
       textColumn.find(".update-title").val(data["title"]);
+      textColumn.on("click", ".update-button", function(updateEvent) { 
+        updateEvent.preventDefault();
+
+        });
+      });
     }
   });
 });
