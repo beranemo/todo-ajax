@@ -26,7 +26,9 @@ class TodosController < ApplicationController
   
   def destroy
     @todo = Todo.find(params[:id])
-    @todo.destroy    
+    @todo.destroy
+    byebug
+    render json: { id: @todo.id }
   end
   
   def toggle_check
