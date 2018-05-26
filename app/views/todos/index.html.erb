@@ -35,6 +35,18 @@
   
 </div>
 <script>
+$("#todolist").on("click", ".edit-todo", function(event){
+  var id = event.target.parentNode.parentNode.id;
+  $.ajax({
+    url: 'todos/' + id + "/edit",
+    method: 'GET',
+    dataType: 'json',
+    success: function(data){
+      
+    }
+  });
+});
+
 $("#but-create").on("click", function(event){
   event.preventDefault();
   $.ajax({
