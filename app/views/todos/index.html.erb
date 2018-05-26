@@ -48,21 +48,20 @@ $("#todolist").on("click", ".edit-todo", function(event){
       textColumn.on("click", ".update-button", function(updateEvent) { 
         updateEvent.preventDefault();
         
-          $.ajax({
-            url: "todos/" + data["id"],
-            method: "PATCH",
-            dataType: "json",
-            data: { 
-              todo : {
-                title : textColumn.find(".update-title").val()
-              }
-            },
-            success: function(updateData) {
-
+        $.ajax({
+          url: "todos/" + data["id"],
+          method: "PATCH",
+          dataType: "json",
+          data: { 
+            todo : {
+              title : textColumn.find(".update-title").val()
             }
-          });
-        
+          },
+          success: function(updateData) {
+            
+          }
         });
+        
       });
     }
   });
