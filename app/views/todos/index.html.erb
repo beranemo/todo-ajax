@@ -8,19 +8,15 @@
     </div>
     
     <div class="panel-body">
-      <%= form_for @todo, { remote: true } do |f| %>
-        <%= f.label "新增事項" %>
+      <form>
+        <label>新增事項</label>
         <div class="input-group">
-          <%= f.text_field :title, class: "form-control" %>
+          <input type="text_field" id="txt-new" class="form-control" />
           <div class="input-group-addon">
-            <% if @todo.new_record? %>
-              <%= f.submit "新增", class: "my-btn my-btn-transparent" %>
-            <% else %>
-              <%= f.submit "修改", class: "my-btn my-btn-transparent" %>
-            <% end %>
+            <button id="but-create" class="my-btn my-btn-transparent">新增</button>
           </div>
         </div>
-      <% end %>
+      </form>
     </div>
 
     <table class="my-table table table-hover">
