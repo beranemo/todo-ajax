@@ -36,6 +36,7 @@
 </div>
 <script>
 $("#but-create").on("click", function(event){
+  event.preventDefault();
   $.ajax({
     url: 'todos/',
     method: 'POST',
@@ -46,7 +47,11 @@ $("#but-create").on("click", function(event){
       }
     },
     success: function(data){
-      
+      var todo = document.createElement("tr");
+      todo.id = data["id"];
+      $(todo).html($("#todo-template").html());
+      $(todo).find(".title.my-font").html(data["title"]);
+      $("#todolist").append(todo);
     }
   });
 });
