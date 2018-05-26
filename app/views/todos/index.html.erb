@@ -35,6 +35,22 @@
   
 </div>
 <script>
+$("#but-create").on("click", function(event){
+  $.ajax({
+    url: 'todos/',
+    method: 'POST',
+    dataType: 'json',
+    data: {
+      todo: {
+        title: $("#txt-todo").val();
+      }
+    },
+    success: function(data){
+      
+    }
+  });
+});
+
 $("#todolist").on("click", ".delete-todo", function(event){
   var id = event.target.parentNode.parentNode.id;
   console.log(id);
