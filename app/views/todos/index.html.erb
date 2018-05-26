@@ -39,7 +39,7 @@
   
 </div>
 <script>
-$(".delete-todo").on("click", function(event){
+$("#todolist").on("click", ".delete-todo", function(event){
   var id = event.target.parentNode.parentNode.id;
   console.log(id);
   $.ajax({
