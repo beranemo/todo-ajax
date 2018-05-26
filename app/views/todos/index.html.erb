@@ -40,6 +40,8 @@
 </div>
 <script>
 $("#delete-todo").on("click", function(event){
-  
+  var id = event.target.parentNode.parentNode.parentNode.id;
+  console.log(id);
+  console.log('qq');
 });
 </script>
